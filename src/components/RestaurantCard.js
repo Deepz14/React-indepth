@@ -1,12 +1,12 @@
 
 const RestaurantCard = (props) => {
-    const { name, cuisine, ratings, eta} = props.resData
+    const { name, cuisine, ratings, eta, image} = props.resData
     return (
         <div className="res-card-container">
             <div className='res-card-img'>
                 <img 
                     className='res-card-logo'
-                    src='https://media.istockphoto.com/id/179085494/photo/indian-biryani.jpg?s=612x612&w=0&k=20&c=VJAUfiuavFYB7PXwisvUhLqWFJ20-9m087-czUJp9Fs='
+                    src={image}
                     alt="res-card-logo"
                 />
             </div>
