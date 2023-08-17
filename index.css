@@ -1,0 +1,47 @@
+.heading{
+    color: blue !important;
+}
+#child1{
+    color: yellowgreen;
+}
+#child2{
+    color:skyblue;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+}
+.logo-img{
+    width: 120px;
+    height: 120px;
+}
+.nav-items{
+    display: flex;
+    list-style: none;
+    padding: 0px 15px;
+}
+.nav-links{
+    padding: 5px;
+}
+.search-container{
+    padding: 5px;
+}
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.res-card-container{
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+.res-card-container:hover{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.res-card-logo{
+    width: 100%;
+}
