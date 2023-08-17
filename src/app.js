@@ -90,7 +90,8 @@ const HeaderComponent = () => {
     )
 }
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+    const { name, cuisine, ratings, eta} = props.resData
     return (
         <div className="res-card-container">
             <div className='res-card-img'>
@@ -100,35 +101,31 @@ const RestaurantCard = () => {
                     alt="res-card-logo"
                 />
             </div>
-            <h3 className='res-title'>Meghana Foods</h3>
-            <h4>Biriyani, North Indian, Asian</h4>
-            <h4>4.4 stars</h4>
-            <h4>40 min</h4>
+            <h3 className='res-title'>{name}</h3>
+            <h4>{cuisine}</h4>
+            <h4>{ratings} stars</h4>
+            <h4>{eta} min</h4>
         </div>
     )
 }
+
+const resObj = [
+    {'id': 1, 'name': 'Meghana Foods', 'cuisine': 'Biriyani, North Indian, Asian', 'ratings': '4.4', 'eta': '40'},
+    {'id': 2, 'name': 'KFC', 'cuisine': 'Fried, Chicken, Burger', 'ratings': '4.0', 'eta': '28'}
+]
 
 const BodyLayout = () => {
     return (
         <div className='main'>
             <div className='search-container'>Search</div>
             <div className='restaurant-container'>
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
+                {
+                    resObj.map((restaurant) => {
+                        return (
+                            <RestaurantCard key={restaurant.id} resData={restaurant} />
+                        )
+                    })
+                }
             </div>
         </div>
     )
