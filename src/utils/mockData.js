@@ -1,14 +1,16 @@
 const RESTAURANT_LIST = [
-    {'id': 1, 'name': 'Meghana Foods', 'cuisine': 'Biriyani, North Indian, Asian', 'ratings': '4.4', 'eta': '40', 'image': 'https://media.istockphoto.com/id/179085494/photo/indian-biryani.jpg?s=612x612&w=0&k=20&c=VJAUfiuavFYB7PXwisvUhLqWFJ20-9m087-czUJp9Fs='},
-    {'id': 2, 'name': 'KFC', 'cuisine': 'Burgers, Briyani, American, Snacks', 'ratings': '4.1', 'eta': '28', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/56c9ab92bd79745fd152a30fa2525426'},
-    {'id': 3, 'name': 'Kongu Parota Stall', 'cuisine': 'Chinese, North Indian, South Indian, Briyani', 'ratings': '4', 'eta': '35', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/voyfifye0hqbvzmqmylh'},
-    {'id': 4, 'name': 'Kokkarakko Briyani & Fast Food', 'cuisine': 'Chinese, North Indian', 'ratings': '3.6', 'eta': '30', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/jubamtkxm5h1wb2iiid1'},
-    {'id': 5, 'name': 'Ayyan Mansatti Samayal', 'cuisine': 'Chinese, North Indian, South Indian, Ice cream', 'ratings': '3.6', 'eta': '44', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/otsfrpvhhlasbqcs4ogb'},
-    {'id': 6, 'name': 'Hyderabadi Briyani', 'cuisine': 'Desserts, Chinese, North Indian, Briyani', 'ratings': '4', 'eta': '40', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/btrhyg6oqzezyqqw6b6j'},
-    {'id': 7, 'name': 'Star Briyani & Fast Food', 'cuisine': 'Chinese, North Indian, South Indian, Briyani', 'ratings': '3.8', 'eta': '42', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/iztj3ooeqjffe2uyfn18'},
-    {'id': 8, 'name': 'Boomerang', 'cuisine': 'Desserts, Ice cream', 'ratings': '4.1', 'eta': '33', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/flumf7l4onm9eoujugcx'},
-    {'id': 9, 'name': 'Barbequeen Restaurant', 'cuisine': 'Chinese, North Indian, South Indian, Briyani', 'ratings': '4', 'eta': '30', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f7zosojaykccl1wi1c02'},
-    {'id': 10, 'name': 'Snackers republic', 'cuisine': 'Chinese, North Indian, Burgers, Briyani', 'ratings': '4.1', 'eta': '26', 'image': 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gehxlo4wil2dampobq8r'}
+    {'id': 410258, 'name': 'KFC', 'cuisine': ["Burgers", "Biryani", "American", "Snacks", "Fast Food"], "cloudinaryImageId": "56c9ab92bd79745fd152a30fa2525426", "areaName": "Erode", 'ratings': '4.1', 'eta': '15 mins'},
+    {'id': 97366, 'name': "Domino's Pizza", 'cuisine': ["Pizzas",  "Italian", "Pastas", "Desserts"],  "cloudinaryImageId": "e2dkco5rkwonjmqjnvcg", "areaName": "Palayapalayam", 'ratings': '4.2', 'eta': '25 mins'},
+    {'id': 113143, 'name': "UBQ by Barbeque Nation", 'cuisine': ["North Indian", "Barbecue", "Biryani", "Kebabs", "Mughlai","Desserts"], "cloudinaryImageId": "rffdl89omil4kgadbrbt", "areaName": "Palayapalayam", 'ratings': '3.9', 'eta': '25 mins'},
+    {'id': 379801, 'name': "Meat And Eat", 'cuisine': ["Chinese", "Burgers", "Ice Cream"], "cloudinaryImageId": "imwq6oyo49zsqpgy4vtj", "areaName": "Erode", 'ratings': '4.0', 'eta': '21 mins'},
+    {'id': 408122, 'name': "Pizza Hut", 'cuisine': ["Pizzas"], "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7", "areaName": "Edayankattuvalasu", 'ratings': '3.9', 'eta': '24 mins'},
+    {'id': 429930, 'name': "The Belgian Waffle Co.", 'cuisine': ["Waffle", "Desserts", "Ice Cream", "Beverages"], "cloudinaryImageId": "8cb220fa3997a3b928d2ffb6c098acaf", "areaName": "Palayapalayam", 'ratings': '4.4', 'eta': '28 mins'},
+    {'id': 401111, 'name': "Kwality Walls Frozen Dessert and Ice Cream Shop", 'cuisine': ["Desserts", "Ice Cream", "Ice Cream Cakes"], "cloudinaryImageId": "nwyswrnqtbl4shnfyzgx", "areaName": "Erode", 'ratings': '4.4', 'eta': '27 mins'},
+    {'id': 121742, 'name': "Baskin Robbins - Ice Cream Desserts", 'cuisine': ["Ice Cream", "Desserts"], "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395", "areaName": "Erode Fort", 'ratings': '4.3', 'eta': '16 mins'},
+    {'id': 502057, 'name': "NIC Ice Creams", 'cuisine': ["Ice Cream", "Desserts"], "cloudinaryImageId": "c8b98c4064dc2fd6bdf350212e5f0bd5", "areaName": "Dr Radhakrishnan Road", 'ratings': '4.6', 'eta': '15 mins'},
+    {'id': 435960, 'name': "Erode Kongu Parotta Stall", 'cuisine': ["Chinese", "South Indian", "Biryani"], "cloudinaryImageId": "qx49dcpqcrvgoq7sdcpt", "areaName": "Central Erode", 'ratings': '4.0', 'eta': '23 mins'},
+    {'id': 106261, 'name': "Ibaco", 'cuisine': ["Desserts", "Continental"], "cloudinaryImageId": "t0xm61sm8sdd4ogeicvr", "areaName": "NGO Colony", 'ratings': '4.4', 'eta': '12 mins'},
+    {'id': 360038, 'name': "Dindigul Thalappakatti", 'cuisine': ["Biryani", "Barbecue","South Indian", "Chinese", "North Indian"], "cloudinaryImageId": "bfxld79ln0li5tnhlnwd", "areaName": "Erode Fort", 'ratings': '4.0', 'eta': '20 mins'}
 ]
 
 export default RESTAURANT_LIST
