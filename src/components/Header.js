@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { HEADER_LOGO } from "../utils/constants";
 
@@ -16,9 +17,15 @@ const HeaderComponent = () => {
             </div>
             <div className='nav-container'>
                 <ul className='nav-items'>
-                    <li className='nav-links'>Home</li>
-                    <li className='nav-links'>About Us</li>
-                    <li className='nav-links'>Contact Us</li>
+                    <li className='nav-links'>
+                       <Link to={'/'}>Home</Link> 
+                    </li>
+                    <li className='nav-links'>
+                        <Link to={'/about'}>About Us</Link>
+                    </li>
+                    <li className='nav-links'>
+                        <Link to={'/contact'}>Contact Us</Link>
+                    </li>
                     <li className='nav-links'>Cart</li>
                     <button className="login-btn" 
                         onClick={() => loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login")}>
