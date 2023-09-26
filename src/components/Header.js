@@ -1,10 +1,16 @@
+import { useState } from "react";
+
+import { HEADER_LOGO } from "../utils/constants";
+
 const HeaderComponent = () => {
+    const [ loginBtn, setLoginBtn ] = useState("Login");
+
     return (
         <div className="header">
             <div className='logo'>
                 <img 
                     className='logo-img'
-                    src='https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fast-food-logo%2Cchef-logo%2Crestaurant-logo%2Cfire-design-template-7648600f54c48617d64e973dd3af8cda_screen.jpg?ts=1663142017'
+                    src={HEADER_LOGO}
                     alt='logo-img'
                 />
             </div>
@@ -14,6 +20,10 @@ const HeaderComponent = () => {
                     <li className='nav-links'>About Us</li>
                     <li className='nav-links'>Contact Us</li>
                     <li className='nav-links'>Cart</li>
+                    <button className="login-btn" 
+                        onClick={() => loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login")}>
+                        {loginBtn}
+                    </button>
                 </ul>
             </div>
         </div>
