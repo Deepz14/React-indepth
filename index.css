@@ -64,3 +64,8 @@
     background-color: #f0f0f0;
     cursor: pointer;
 }
+
+.userInfoContainer{
+    border: 1px solid #000;
+    padding: 10px;
+}
