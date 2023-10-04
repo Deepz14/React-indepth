@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 import RestaurantCard from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
-import { RESTAURANT_API } from "../utils/constants";
+import { RESTAURANTS_API } from "../utils/constants";
 
 const BodyLayout = () => {
     const [listRestaurant, setListRestaurant] = useState([]);
@@ -14,7 +15,7 @@ const BodyLayout = () => {
     }, []);
 
     const fetchData = async() => {
-        const data = await fetch(RESTAURANT_API);
+        const data = await fetch(RESTAURANTS_API);
         const transData = await data.json();
         let restaurantData = transData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         let restaurantInfo = [];
@@ -52,7 +53,10 @@ const BodyLayout = () => {
                 {
                     filteredRestaurant.map((restaurant) => {
                         return (
-                            <RestaurantCard key={restaurant.id} resData={restaurant} />
+                            <Link to={`restaurant/${restaurant.id}`} key={restaurant.id}>
+                                <RestaurantCard resData={restaurant} />
+                            </Link>
+                          
                         )
                     })
                 }
