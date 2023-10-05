@@ -3,12 +3,14 @@ const RESTAURANT_CARD_LOGO = "https://media-assets.swiggy.com/swiggy/image/uploa
 const HEADER_LOGO = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fast-food-logo%2Cchef-logo%2Crestaurant-logo%2Cfire-design-template-7648600f54c48617d64e973dd3af8cda_screen.jpg?ts=1663142017"
 const RESTAURANT_INFO = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.354624950160694&lng=77.7291676774621&restaurantId="
 const RESTAURANT_INFO_IMG = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"
+const USER_API = "https://api.github.com/users/Deepz14"
 export {
     RESTAURANTS_API,
     RESTAURANT_INFO,
     RESTAURANT_CARD_LOGO,
     HEADER_LOGO,
-    RESTAURANT_INFO_IMG
+    RESTAURANT_INFO_IMG,
+    USER_API
 }
 
 

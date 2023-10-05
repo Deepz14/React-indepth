@@ -12,6 +12,16 @@ const BodyLayout = () => {
 
     useEffect(() => {
         fetchData();
+
+    // const bodyTimer = setInterval(() => {
+    // console.log('Body component timer');
+    // }, 1000);
+
+        return () => {
+            // Below code will execute if the component gets destroyed.
+            console.log("BODY COMPONENT DESTROYED!");
+            //clearInterval(bodyTimer);
+        }
     }, []);
 
     const fetchData = async() => {
