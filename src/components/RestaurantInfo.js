@@ -1,32 +1,17 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
-import { RESTAURANT_INFO, RESTAURANT_INFO_IMG } from "../utils/constants";
+import { RESTAURANT_INFO_IMG } from "../utils/constants";
+import useRestaurantInfo from "../utils/useRestaurantInfo";
 
 const RestaurantInfo = () => {
 
-    const [resInfo, setResInfo] = useState();
-    const [recomntdInfo, setRecomntdInfo] = useState([]);
     const { resId }= useParams();
-
-    useEffect(() => {
-        fetchRestaurantInfo();
-    }, []);
-
-    const fetchRestaurantInfo = async() => {
-        const data = await fetch(RESTAURANT_INFO + resId);
-        const jsonData = await data.json();
-        //console.log("RESTAURANT INFO: ", jsonData);
-        setResInfo(jsonData?.data?.cards[0]?.card?.card?.info)
-        //console.log("RECOMMENTED CONTAINER INFO: ", jsonData?.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards)
-        const recommContainerInfo = [];
-        jsonData?.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards.forEach((item) => {
-            recommContainerInfo.push(item?.card?.info);
-        });
-        //console.log("RECOMMENTED CONTAINER ", recommContainerInfo);
-        setRecomntdInfo(recommContainerInfo);
-
-    }
+    const getRestaurantInfo = useRestaurantInfo(resId);
+    const resInfo = getRestaurantInfo?.cards[0]?.card?.card?.info;
+    const recomntdInfo = [];
+    getRestaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.
+    REGULAR?.cards[1]?.card?.card?.itemCards.forEach((item) => {
+        recomntdInfo.push(item?.card?.info);
+    });
 
     return (
         <div>
