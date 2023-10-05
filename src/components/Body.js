@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
 import { RESTAURANTS_API } from "../utils/constants";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const BodyLayout = () => {
     const [listRestaurant, setListRestaurant] = useState([]);
@@ -42,6 +43,11 @@ const BodyLayout = () => {
         setFilteredRestaurant(searchRes);
     }
 
+    const isOnline = useOnlineStatus(); 
+    if (isOnline === false){
+        return <h3>You're offline. Check your Internet Connection!</h3>
+    }
+    
     return listRestaurant.length === 0 ? <ShimmerUI /> : (
         <div className='main'>
             <div className='search-container'>
