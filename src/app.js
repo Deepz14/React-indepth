@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import HeaderComponent from './components/Header';
 import BodyLayout from './components/Body';
-import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import ErrorComponent from './components/Error';
 import RestaurantInfo from './components/RestaurantInfo';
@@ -18,6 +17,8 @@ const AppLayout = () => {
     )
 }
 
+const AboutUs = lazy(() => import("./components/AboutUs"));
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <AboutUs />
+                element: <Suspense fallback={<h3>Loading.....</h3>}>
+                    <AboutUs />
+                </Suspense> 
             },
             {
                 path: "/contact",
