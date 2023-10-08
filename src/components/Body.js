@@ -49,23 +49,26 @@ const BodyLayout = () => {
     }
     
     return listRestaurant.length === 0 ? <ShimmerUI /> : (
-        <div className='main'>
-            <div className='search-container'>
-                <input type="search" value={searchRestaurant} onChange={searchHandler} />
-                <button onClick={() => {
+        <div className='main justify-self-center'>
+            <div className='search-container my-3 mx-6 px-8 '>
+                <input className="border border-solid border-gray-400 w-[280] h-[40] px-4 outline-transparent rounded" type="search" 
+                   placeholder="Search for restaurants" value={searchRestaurant} onChange={searchHandler} />
+                <button className="bg-yellow-500 text-white hover:text-black mx-2  
+                    border-r-gray-400 border-b-gray-400 px-8 h-[40] font-semibold rounded" onClick={() => {
                     const searchRes = listRestaurant
                     .filter((item) => String(item.name).toLowerCase().includes(searchRestaurant.toLowerCase()));
                     setFilteredRestaurant(searchRes);
 
                 }}>Search</button>
-                <button className="filter-btn"
+                <button className="filter-btn ml-3
+                    px-5 py-2 rounded font-semibold bg-yellow-500 outline-transparent text-white hover:text-black"
                     onClick={() => {
                         const filteredList = listRestaurant.filter((item) => item.avgRating > 4);
                         setFilteredRestaurant(filteredList);
                     }}
                 >Top Rate Restaurant</button>
             </div>
-            <div className='restaurant-container'>
+            <div className='restaurant-container flex flex-wrap px-5 mx-5'>
                 {
                     filteredRestaurant.map((restaurant) => {
                         return (
