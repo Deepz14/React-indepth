@@ -1,4 +1,8 @@
-.heading{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .heading{
     color: blue !important;
 }
 #child1{
@@ -72,4 +76,4 @@
 .about-user-img{
     height: 150px;
     width: 150px;
-}
+} */
