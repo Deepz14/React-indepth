@@ -7,15 +7,15 @@ const RestaurantCard = (props) => {
         return curr;
     }, '');
     return (
-        <div className="res-card-container w-[260] m-3">
+        <div className="res-card-container max-w-[250] m-3 px-[6]">
             <div className='res-card-img'>
                 <img 
-                    className='w-[260] h-[160] rounded'
+                    className='w-[250] h-[180] rounded-md'
                     src={`${RESTAURANT_CARD_LOGO}${cloudinaryImageId}`}
                     alt="res-card-logo"
                 />
             </div>
-            <h3 className='font-bold'>{name}</h3>
+            <h1 className='font-bold'>{name}</h1>
             <h4 className="flex font-semibold items-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" 
                 aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)">
                 <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
@@ -33,9 +33,13 @@ const RestaurantCard = (props) => {
                 </stop></linearGradient></defs></svg> 
                 <span className="pl-2">{avgRatingString} </span>
             </h4>
-            <h4 className='font-normal'>{cuisines.join(',')}</h4>
-            <h4 className='font-normal'>{sla?.slaString}</h4>
-            <h4 className='font-normal'>{areaName}</h4>
+            <h5 className='font-normal w-[250] mr-[5]'>{
+              cuisines?.length > 4 ?  cuisines?.splice(4, 2).join(',') : 
+              cuisines?.join(',')
+              }
+            </h5>
+            <h5 className='font-normal'>{sla?.slaString}</h5>
+            <h5 className='font-normal'>{areaName}</h5>
         </div>
     )
 }
