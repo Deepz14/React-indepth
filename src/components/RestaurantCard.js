@@ -16,7 +16,8 @@ const RestaurantCard = (props) => {
                 />
             </div>
             <h1 className='font-bold'>{name}</h1>
-            <h4 className="flex font-semibold items-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" 
+            <h4 className="flex font-semibold items-center">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" 
                 aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)">
                 <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
                 <path d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 
