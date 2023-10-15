@@ -8,23 +8,23 @@ class UserClass extends React.Component{
             count2: 0
         }
 
-        console.log(`Child - ${this.props.num} constructor`);
+        //console.log(`Child - ${this.props.num} constructor`);
     }
 
     componentDidMount(){
-        console.log(`Child - ${this.props.num} DidMount`);
+        //console.log(`Child - ${this.props.num} DidMount`);
     }
 
     componentDidUpdate(){
-        console.log(`Child - ${this.props.num} DidUpdate`);
+        //console.log(`Child - ${this.props.num} DidUpdate`);
     }
 
     componentWillUnmount(){
-        console.log("Child Component Destroyed");
+        //console.log("Child Component Destroyed");
     }
 
     render(){
-        console.log(`Child - ${this.props.num} render`);
+        //console.log(`Child - ${this.props.num} render`);
         const { name, location, bio, avatar_url } = this.props.userInfo;
         const { count1, count2 } = this.state;
         return (

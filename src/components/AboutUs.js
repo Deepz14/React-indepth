@@ -7,7 +7,7 @@ class AboutUs extends React.Component {
 
     constructor(props){
         super(props)
-        console.log("Parent constructor");
+        //console.log("Parent constructor");
         this.state = {
             userInfo : {
                 name: "",
@@ -23,7 +23,7 @@ class AboutUs extends React.Component {
     }
 
     async componentDidMount(){
-        console.log("Parent DidMount");
+        //console.log("Parent DidMount");
         const getUserInfo = await fetch(USER_API);
         const jsonData = await getUserInfo.json();
         this.setState({
@@ -32,16 +32,16 @@ class AboutUs extends React.Component {
     }
 
     componentDidUpdate(){
-        console.log(`Parent DidUpdate`);
+        //console.log(`Parent DidUpdate`);
     }
 
     componentWillUnmount(){
         //clearInterval(this.timerClass);
-        console.log("Parent Component Destroyed");
+        //console.log("Parent Component Destroyed");
     }
 
     render () {
-        console.log("Parent render");
+        //console.log("Parent render");
         return (
             <div>
                 <h1>About Us</h1>

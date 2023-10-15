@@ -20,7 +20,7 @@ const BodyLayout = () => {
 
         return () => {
             // Below code will execute if the component gets destroyed.
-            console.log("BODY COMPONENT DESTROYED!");
+            //console.log("BODY COMPONENT DESTROYED!");
             //clearInterval(bodyTimer);
         }
     }, []);
