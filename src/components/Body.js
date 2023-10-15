@@ -5,11 +5,14 @@ import RestaurantCard from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
 import { RESTAURANTS_API } from "../utils/constants";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import userContext from "../utils/userContext";
 
 const BodyLayout = () => {
     const [listRestaurant, setListRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [searchRestaurant, setSearchRestaurant] = useState("");
+    const { loggedInUser, setUserName} = useContext(userContext);
 
     useEffect(() => {
         fetchData();
@@ -67,6 +70,9 @@ const BodyLayout = () => {
                         setFilteredRestaurant(filteredList);
                     }}
                 >Top Rate Restaurant</button>
+                <label className="font-lg font-bold ml-5">UserName: </label>
+                <input type="text" placeholder="UserName" className="border border-solid border-gray-400 px-4 mx-5 py-1 rounded"
+                   value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
             </div>
             <div className='restaurant-container flex flex-wrap px-5 mx-5'>
                 {

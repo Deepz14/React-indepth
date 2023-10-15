@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 
 import { HEADER_LOGO } from "../utils/constants";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import userContext from "../utils/userContext";
 
 const HeaderComponent = () => {
     const [ loginBtn, setLoginBtn ] = useState("Login");
     const isOnline = useOnlineStatus();
+    const { loggedInUser } = useContext(userContext);
 
     return (
         <div className="flex justify-between items-center shadow mb-3">
@@ -36,6 +39,7 @@ const HeaderComponent = () => {
                         onClick={() => loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login")}>
                         {loginBtn}
                     </button>
+                    <li className="nav-links  px-5">{loggedInUser}</li>
                 </ul>
             </div>
         </div>

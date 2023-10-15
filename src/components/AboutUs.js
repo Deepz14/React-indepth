@@ -1,5 +1,6 @@
 import React from "react";
 import UserClass from "./UserClass";
+import userContext from "../utils/userContext";
 
 import { USER_API } from "../utils/constants";
 
@@ -46,6 +47,9 @@ class AboutUs extends React.Component {
             <div>
                 <h1>About Us</h1>
                 <h3>Welcome to the Application!!</h3>
+                <userContext.Consumer>
+                    {({loggedInUser}) => <h4>User: {loggedInUser}</h4> }
+                </userContext.Consumer>
                 <UserClass userInfo={this.state.userInfo} num={"1"} />
             </div>
         )
