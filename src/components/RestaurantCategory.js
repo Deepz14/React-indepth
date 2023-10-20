@@ -1,6 +1,6 @@
 import RestaurantItemCategory from "./RestaurantItemCategory";
 
-const RestaurantCategory = ({data, isShowCategory, changeShowCategory}) => {
+const RestaurantCategory = ({resInfo, data, isShowCategory, changeShowCategory}) => {
 
     return (
         <div> 
@@ -10,7 +10,7 @@ const RestaurantCategory = ({data, isShowCategory, changeShowCategory}) => {
                 <span className="pt-2">{ isShowCategory ? "🔼" : "🔽"}</span>
             </div>
             {   isShowCategory &&
-                data?.itemCards?.map((c) => <RestaurantItemCategory item={c?.card?.info} />)
+                data?.itemCards?.map((c) => <RestaurantItemCategory key={c?.card?.info?.id} item={c?.card?.info} resInfo={resInfo} />)
             }
         </div>
     )

@@ -1,6 +1,18 @@
+import { useDispatch } from "react-redux";
+import { add } from "../store/cartSlice";
 import { RESTAURANT_INFO_IMG } from "../utils/constants";
 
-const RestaurantItemCategory = ({item}) => {
+const RestaurantItemCategory = ({resInfo, item}) => {
+    const dispatch = useDispatch();
+    const handleAddToCart = (item) => {
+        item.quantity = 1;
+        const payload = {
+            restaurantName: resInfo?.name,
+            location: resInfo?.areaName,
+            cartItem: item
+        }
+        dispatch(add(payload))
+    }
     return (
         <div className="pt-2 px-2">
             <div className="res-info-recomm-data flex justify-between items-center
@@ -20,10 +32,13 @@ const RestaurantItemCategory = ({item}) => {
                         <img className="h-[120] w-[150] rounded-md" src={`${RESTAURANT_INFO_IMG}${item?.imageId}`} />
                         <div className="absolute left-8 bottom-0">
                             <button className="text-green-500 font-bold bg-white
-                            border border-gray-300 px-5 py-1 rounded-md">Add +</button>
+                            border border-gray-300 px-5 py-1 rounded-md"
+                            onClick={() => handleAddToCart(item)}>Add +</button>
                         </div>
                     </div> : 
-                    <button className="text-green-500 font-bold bg-white border border-gray-300 px-5 py-1 rounded-md">Add +</button>
+                    <button className="text-green-500 font-bold bg-white 
+                    border border-gray-300 px-5 py-1 rounded-md"
+                    onClick={() => handleAddToCart(item)}>Add +</button>
                 }
             </div>
             <hr className="my-[20] border border-dotted border-t-transparent border-r-transparent 

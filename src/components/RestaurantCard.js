@@ -18,7 +18,7 @@ const RestaurantCard = (props) => {
             <h1 className='font-bold'>{name}</h1>
             <h4 className="flex font-semibold items-center">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" 
-                aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)">
+                aria-hidden="true" strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
                 <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
                 <path d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 
                 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195
@@ -30,7 +30,7 @@ const RestaurantCard = (props) => {
                 </path><defs>
                 <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" 
                 x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540">
+                <stop stopColor="#21973B"></stop><stop offset="1" stopColor="#128540">
                 </stop></linearGradient></defs></svg> 
                 <span className="pl-2">{avgRatingString} </span>
             </h4>

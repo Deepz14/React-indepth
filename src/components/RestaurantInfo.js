@@ -25,7 +25,7 @@ const RestaurantInfo = () => {
             {
                 restaurantCategory?.length > 0 ?
                 restaurantCategory?.map((c, i) => 
-                    <RestaurantCategory key={c?.card?.card?.title} 
+                    <RestaurantCategory key={c?.card?.card?.title} resInfo={resInfo}
                         data={c?.card?.card} isShowCategory={showCategory === i} 
                         changeShowCategory={() => updateShowCategory(i)} />) :
                 ""
