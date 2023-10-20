@@ -1,18 +1,19 @@
 import { useDispatch } from "react-redux";
-import { add } from "../store/cartSlice";
+import { addCart } from "../store/cartSlice";
 import { RESTAURANT_INFO_IMG } from "../utils/constants";
 
 const RestaurantItemCategory = ({resInfo, item}) => {
     const dispatch = useDispatch();
+
     const handleAddToCart = (item) => {
-        item.quantity = 1;
         const payload = {
             restaurantName: resInfo?.name,
             location: resInfo?.areaName,
             cartItem: item
         }
-        dispatch(add(payload))
+        dispatch(addCart(payload));
     }
+
     return (
         <div className="pt-2 px-2">
             <div className="res-info-recomm-data flex justify-between items-center
