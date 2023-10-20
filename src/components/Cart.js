@@ -1,9 +1,11 @@
+import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
     return (
         <div>
-            <EmptyCart />
+            <CartItem />
+            {/* <EmptyCart /> */}
         </div>
     )    
 }

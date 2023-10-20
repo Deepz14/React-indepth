@@ -9,6 +9,8 @@ import ErrorComponent from './components/Error';
 import RestaurantInfo from './components/RestaurantInfo';
 import Cart from './components/cart';
 import userContext from './utils/userContext';
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 
 const AppLayout = () => {
 
@@ -22,12 +24,14 @@ const AppLayout = () => {
     }, []);
 
     return (
-        <userContext.Provider value={{loggedInUser: userName, setUserName}}>
-            <div className='app' id='app'>
-                <HeaderComponent />
-                <Outlet />
-            </div>
-        </userContext.Provider>
+        <Provider store={store}>
+            <userContext.Provider value={{loggedInUser: userName, setUserName}}>
+                <div className='app' id='app'>
+                    <HeaderComponent />
+                    <Outlet />
+                </div>
+            </userContext.Provider>
+        </Provider>
     )
 }
 
