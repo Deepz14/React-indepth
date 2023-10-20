@@ -7,6 +7,7 @@ import BodyLayout from './components/Body';
 import ContactUs from './components/ContactUs';
 import ErrorComponent from './components/Error';
 import RestaurantInfo from './components/RestaurantInfo';
+import Cart from './components/cart';
 import userContext from './utils/userContext';
 
 const AppLayout = () => {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: "restaurant/:resId",
                 element: <RestaurantInfo />
+            },
+            {
+                path: "/cart",
+                element: <Cart />
             }
         ],
         errorElement: <ErrorComponent />

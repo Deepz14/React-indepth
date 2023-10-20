@@ -2,78 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .heading{
-    color: blue !important;
-}
-#child1{
-    color: yellowgreen;
-}
-#child2{
-    color:skyblue;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid grey;
-}
-.logo-img{
-    width: 120px;
-    height: 120px;
-}
-.nav-items{
-    display: flex;
-    list-style: none;
-    padding: 0px 15px;
-}
-.nav-links{
-    padding: 5px;
-}
-.search-container{
-    padding: 5px;
-}
-.filter-btn{
-    margin-left: 8px;
-}
-.restaurant-container, .shimmer-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-.res-card-container{
-    width: 200px;
-    margin: 5px;
-    padding: 5px;
-    background-color: #f0f0f0;
-    cursor: pointer;
-}
-.res-card-container:hover{
-    border: 1px solid black;
-    border-radius: 5px;
-}
-.res-card-img{
-    height: 180px;
-}
-.res-card-logo{
-    width: 100%;
-    height: 100%;
-}
-.login-btn{
-    padding: 0 16px;
+.empty-card-logo{
+    background-image: url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 270px;
+    height: 256px;
+    margin:  0 auto;
 }
 
-.shimmer-card{
-    width: 120px;
-    height: 200px;
-    margin: 5px;
-    padding: 5px;
-    background-color: #f0f0f0;
-    cursor: pointer;
+.nav-links:hover {
+  color: #EAB308;
 }
 
-.userInfoContainer{
-    border: 1px solid #000;
-    padding: 10px;
+.cart-link:hover > .cart-logo{
+    stroke: #EAB308;
 }
-.about-user-img{
-    height: 150px;
-    width: 150px;
-} */
