@@ -7,7 +7,6 @@ import { useContext } from "react";
 import userContext from "../utils/userContext";
 
 const HeaderComponent = () => {
-    //const [ loginBtn, setLoginBtn ] = useState("Login");
     const isOnline = useOnlineStatus();
     const { loggedInUser } = useContext(userContext);
     const cartCount = useSelector((state) => state.cart.totalCart)
@@ -45,10 +44,6 @@ const HeaderComponent = () => {
                             </Link>
                         </span>
                     </li>
-                    {/* <button className="login-btn" 
-                        onClick={() => loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login")}>
-                        {loginBtn}
-                    </button> */}
                     <li className="nav-links  px-5">{loggedInUser}</li>
                 </ul>
             </div>
